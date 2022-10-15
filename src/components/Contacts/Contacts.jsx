@@ -10,7 +10,7 @@ export const Contacts = () => {
 
   return (
     <ContactsList id="contacts">
-      {contacts.filter(contact => contact.name.toLowerCase().includes(filter)).map((contact) => (
+      {contacts.filter(contact => contact.name.toLowerCase().includes(filter.toLowerCase())).map((contact) => (
           <ContactsItem key={contact.id} name={contact.name} number={contact.number} id={contact.id} />
       ))}
     </ContactsList>
